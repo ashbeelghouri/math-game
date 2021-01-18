@@ -12,7 +12,7 @@ export class EquationComponent implements OnInit {
     a: new FormControl(this.randomNumber()),
     b: new FormControl(this.randomNumber()),
     answer: new FormControl('')  
-  }, [CustomValidators.addition]);
+  }, [CustomValidators.addition('answer', 'a', 'b')]);
 
   constructor() { }
 
