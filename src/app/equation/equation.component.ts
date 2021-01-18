@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { CustomValidators } from '../custom-validators';
 @Component({
   selector: 'app-equation',
   templateUrl: './equation.component.html',
@@ -11,7 +12,7 @@ export class EquationComponent implements OnInit {
     a: new FormControl(this.randomNumber()),
     b: new FormControl(this.randomNumber()),
     answer: new FormControl('')  
-  });
+  }, [CustomValidators.addition]);
 
   constructor() { }
 
